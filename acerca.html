@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keole Dev | PMMP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh; /* Asegura que la altura del cuerpo sea siempre completa */
+        }
+
+        .parallax {
+            background: url('Developer.png') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2.text {
+            text-align: center;
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 20px 0;
+            line-height: 1.5;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 18px;
+            z-index: 1000;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #7c7c7c;
+            text-decoration: underline;
+        }
+
+        .boton {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            background-color: #1a1a1a;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+
+        .boton img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .boton:hover {
+            background-color: #333;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Works.html">Works</a>
+        <a href="Plugins.html">Plugins</a>
+        <a href="Acerca.html">Acerca</a>
+    </nav>
+    
+    <div class="parallax"></div>
+
+    <h1 id="texto" class="Info"></h1>
+
+    <h2 class="text"> Hola soy Keo, Designer WEB y Discord Manager. Me gusta configurar servidores bien organizados y con buen diseño. También hago plugins para PMMP para mejorar servidores de Minecraft Pocket Edition y hacerlos más divertidos.
+
+    </h2>
+
+    <a href="https://github.com/keolehub" class="boton">
+        <img src="github.png" alt="GitHub">GitHub
+    </a>
+    <a href="https://discord.com/users/1178129725059772416" class="boton">
+        <img src="discord.webp" alt="Discord">Discord
+    </a>
+    <a href="https://www.youtube.com/@keoleee" class="boton">
+        <img src="yt.png" alt="youtube">Youtube
+    </a>
+    <a href="https://mail.google.com/mail/u/0/?hl=es-419#inbox?compose=CllgCJNtdbdJMJFNRwKdPXSKNQWggqZJgVHfWQkwsXgbNfBRMXQbFQCxMLdbSfJXcWcVjDnXhbV" class="boton">
+        <img src="gmail.png" alt="gmail">Gmail
+    </a>
+
+    <script>
+        const palabras = ["Keole", "Information"];
+        let palabraActual = 0;
+        const velocidad = 100;
+        const pausa = 1000;
+
+        function iniciarAnimacion() {
+            const texto = palabras[palabraActual];
+            let indice = 0;
+            let borrando = false;
+
+            function escribirTexto() {
+                const elementoTexto = document.getElementById("texto");
+
+                if (!borrando && indice < texto.length) {
+                    elementoTexto.innerHTML += texto.charAt(indice);
+                    indice++;
+                    setTimeout(escribirTexto, velocidad);
+                } else if (!borrando && indice === texto.length) {
+                    if (palabraActual === 0) {
+                        borrando = true;
+                        setTimeout(escribirTexto, pausa);
+                    }
+                } else if (borrando && indice > 0) {
+                    elementoTexto.innerHTML = texto.substring(0, indice - 1);
+                    indice--;
+                    setTimeout(escribirTexto, velocidad);
+                } else if (borrando && indice === 0) {
+                    borrando = false;
+                    palabraActual++;
+                    if (palabraActual < palabras.length) {
+                        setTimeout(iniciarAnimacion, velocidad);
+                    }
+                }
+            }
+
+            escribirTexto();
+        }
+
+        iniciarAnimacion();
+    </script>
+</body>
+</html>

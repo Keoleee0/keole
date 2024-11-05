@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Dev | PMMP</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navegación */
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            background-color: #000;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #333;
+        }
+
+        /* Parallax */
+        .parallax {
+            background: url('Developer.png') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            width: 100%;
+        }
+
+        /* Contenedor principal */
+        #main {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .container.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Elementos de trabajo */
+        .item {
+            display: inline-block;
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            text-align: center;
+        }
+
+        .item.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .item img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 15px;
+        }
+
+        .item h2 {
+            color: #ccc;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        /* Proyectos recientes */
+        .projects-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .projects-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+        }
+
+        .project-item h3 {
+            font-size: 1.5em;
+            color: #fff;
+            margin: 0;
+        }
+
+        .project-item p {
+            color: #ccc;
+        }
+
+        /* Pie de página */
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Works.html">Works</a>
+        <a href="Plugins.html">Plugins</a>
+        <a href="Acerca.html">Acerca</a>
+    </nav>
+
+    <!-- Sección de parallax -->
+    <div class="parallax"></div>
+
+    <!-- Contenido principal -->
+    <div id="main">
+        <!-- Bienvenida -->
+        <div class="container show">
+            <h1>Bienvenido a Keole Works</h1>
+            <p>Desarrollador especializado en python y nodex, hago plugins, paginas y configuro discords.</p>
+        </div>
+
+        <!-- Proyectos recientes -->
+        <div class="projects-section">
+            <h2>Proyectos Recientes</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>HCF Core</h3>
+                    <p>Proyecto enfocado en crear una core de hardcore factions desde 0.</p>
+                </div>
+                <div class="project-item">
+                    <h3>StaffMode</h3>
+                    <p>Proyecto enfocado en crear un staffmode sencillo y facil de usar.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Abilitys</h3>
+                    <p>Items personalizados que dan efectos etc</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lugares donde he trabajado -->
+        <div class="projects-section">
+            <h2>Lugares donde he trabajado</h2>
+            <div class="projects-list">
+                <div class="item show">
+                    <img src="swxngs.png" alt="Swxngs">
+                    <h2>SwxngsHCF</h2>
+                </div>
+                <div class="item show">
+                    <img src="Fortune.png" alt="Fortune">
+                    <h2>FortuneMC</h2>
+                </div>
+                <div class="item show">
+                    <img src="elemental.png" alt="Elemental">
+                    <h2>ElementalHCF</h2>
+                </div>
+                <div class="item show">
+                    <img src="asc.png" alt="ascending">
+                    <h2>Ascending</h2>
+                </div>
+                <div class="item show">
+                    <img src="apple.gif" alt="apple">
+                    <h2>Apple HCF</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        © Keole, Todos los derechos reservados.
+    </div>
+</body>
+</html>

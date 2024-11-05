@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keole Dev | PMMP Plugins</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .parallax {
+            background: url('Developer.png') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        .recuadro-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .recuadro {
+            width: 300px;
+            padding: 20px;
+            background-color: dimgray;
+            border: 1px solid white;
+            border-radius: 8px;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .recuadro:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .recuadro img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .recuadro h2 {
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 18px;
+            z-index: 1000;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #7c7c7c;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #888;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="plugins.html">Plugins</a>
+        <a href="acerca.html">Acerca</a>
+    </nav>
+
+    <div class="parallax"></div>
+
+    <h1>Plugins Shop</h1>
+
+    <div class="recuadro-container">
+        <div class="recuadro">
+            <h2>Redeem</h2>
+            <p>Un plugin para la creación de redeem, comandos /redeem create "nombre" y luego /redeem "nombre" se configura desde el rewards.yml.</p>
+            <a href="https://cdn.discordapp.com/attachments/1190127325833084988/1303156973390532708/Redeem.zip?ex=672abb01&is=67296981&hm=c7e875e8636fea4d65d47bb2b46dcedf36c61278e75e8929010dd930ca47492a&" class="boton">Download</a>
+            <a href="https://discord.gg/users/1178129725059772416" class="boton">Ver Review</a>
+        </div>
+
+        <div class="recuadro">
+            <h2>Premade Practice</h2>
+            <p>esta medio bug en algunas cosas pero bueno, funciona totalmente, si logran hacer fix algunos bugs, tienen un bonito practice, yo ya lo fixee les dejo el plugin con unos bugs faciles de arreglar.</p>
+            <a href="https://cdn.discordapp.com/attachments/1231991370852466828/1231991372051906621/Practice_Premade2024.zip?ex=672a3ae0&is=6728e960&hm=2d096611cf5e639f561267254be67ecd97f46ff733a0c62bd3629fe349b0b228&" class="boton">Download</a>
+            <a href="https://discord.gg/users/1178129725059772416" class="boton">Ver Review</a>
+        </div>
+
+        <div class="recuadro">
+            <h2>HCF CORE FREE</h2>
+            <p>Plugins Privados y Core  de servidor
+
+                Sistema de ranks/perms configurado
+                Crates 
+                Menu kits Free/Pay
+                Staffmode  vPriv
+                Abilitys.</p>
+            <a href="https://discord.com/users/1299584775526420544" class="boton">Download</a>
+            <a href="https://discord.gg/users/1178129725059772416" class="boton">Ver Review</a>
+        </div>
+        <div class="recuadro">
+            <h2>Live\Ping</h2>
+            <p>Plugin básico, esto puede servir para los streamers de sus servidores u para ver tu ping, el cooldown del live se configura desde el Main.</p>
+            <a href="https://cdn.discordapp.com/attachments/1203131023777337385/1203131023999766559/Live-Ping.phar?ex=672ab495&is=67296315&hm=670483a20178dac01105c1d4fb46e70b13aecd6abd4105e926a067066a6ce1c0&" class="boton">Download</a>
+            <a href="https://discord.gg/users/1178129725059772416" class="boton">Ver Review</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© Keole Dev, Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>
