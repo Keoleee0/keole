@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keole Dev | PMMP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('Keole_IMG.jpg') no-repeat center center fixed; /* Cambia 'tu-fondo.jpg' por el nombre de tu imagen */
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .parallax {
+            background: url('Developer.png') no-repeat center top;
+            background-size: cover;
+            height: 400px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        #main {
+            margin-top: -5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 8px 12px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        #typed-container {
+            display: inline-block;
+            color: #ccc;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .server-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .item {
+            background-color: #000; /* Fondo negro para los elementos */
+            color: #fff; /* Color del texto en blanco */
+            margin: 50px;
+            text-align: center;
+            padding: 15px; /* Padding para separar el contenido del borde */
+            border-radius: 10px; /* Bordes redondeados */
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
+        }
+
+        .derechos {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 1.2em;
+        }
+
+        .item:hover {
+            transform: scale(1.3);
+        }
+
+        .item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .msg {
+            font-size: 1.5em;
+            color: #ffffffd2;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="plugins.html">Plugins</a>
+        <a href="acerca.html">Acerca</a>
+    </nav>
+
+    <div class="parallax">
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="header-content">
+                <img src="Keole_IMG.jpg" alt="Developer Image">
+            </div>
+            <h1 id="typed-container">
+                <span id="typed-text"></span>
+            </h1>
+            <div class="msg">
+                <p>Hola soy Keo, Designer WEB y Discord Manager. Me gusta configurar servidores bien organizados y con buen diseño. También hago plugins para PMMP para mejorar servidores de Minecraft Pocket Edition y hacerlos más divertidos.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <h1>Aquí algunos de los servidores donde he trabajado</h1>
+            <div class="server-container">
+                <div class="item">
+                    <img src="apple.gif" alt="Ziro Network">
+                    <h2>Apple</h2>
+                </div>
+                <div class="item">
+                    <img src="fortune.png" alt="Repture">
+                    <h2>FortuneMC</h2>
+                </div>
+                <div class="item">
+                    <img src="swxngs.png" alt="Titan">
+                    <h2>SwxngsHCF</h2>
+                </div>
+                <div class="item">
+                    <img src="asc.png" alt="Farming">
+                    <h2>Ascending (Actualmente)</h2>
+                </div>
+                <div class="item">
+                    <img src="elemental.png" alt="Repture">
+                    <h2>ElementalHCF</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const typed = new Typed('#typed-text', {
+                strings: ['Keole', 'Designer WEB', 'Discord Manager', 'Learning PMMP'],
+                typeSpeed: 50,
+                backSpeed: 50,
+                loop: true,
+                onStringTyped: (arrayPos, self) => {
+                    localStorage.setItem('typedText', self.strings[arrayPos]);
+                }
+            });
+            
+            const previousText = localStorage.getItem('typedText');
+            if (previousText) {
+                document.getElementById('typed-text').textContent = previousText;
+            } else {
+                document.getElementById('typed-text').textContent = 'Keole';
+            }
+        });
+    </script>
+
+    <div class="derechos">
+        © Keole Dev, Todos los derechos reservados.
+    </div>
+</body>
+</html>
